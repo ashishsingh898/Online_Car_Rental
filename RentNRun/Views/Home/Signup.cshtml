@@ -1,0 +1,74 @@
+﻿@model RentNRunLib.Signup;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Sign Up</title>
+
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/Signup.css" />
+        <link rel="stylesheet" href="~/css/Home.css" />
+        <link rel="stylesheet" href="~/fontawesome/css/all.css" />
+</head>
+
+<body>
+
+    <div class="main" style="margin-bottom:100px;">
+        <section class="signup">
+            <div class="aw">
+                <div class="signup-content">
+                    <form method="post" id="signup-form" class="signup-form">
+                        <h2 class="form-title">Create account</h2>
+
+                        <div class="form-group">
+                            <input type="text" class="form-input" asp-for=Name id="name" placeholder="Name"/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-input" asp-for=Email id="email" placeholder="Email"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="date" class="form-input" asp-for=DateOfBirth id="email" placeholder="Date Of Birth"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-input" asp-for=ContactNumber id="email" placeholder="Contact Number"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-input" asp-for=City id="email" placeholder="City"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-input" asp-for=State id="email" placeholder="State"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-input" asp-for=Zipcode id="email" placeholder="Zipcode"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-input" asp-for=Password id="password" placeholder="Password"/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
+                        </div>
+                        <div style="color:red; font-size:20px; text-align:center;">
+                            @ViewData["a"]
+                            </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a asp-action="Signin" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
